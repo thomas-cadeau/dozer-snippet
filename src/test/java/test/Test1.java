@@ -34,19 +34,19 @@ public class Test1 {
 			
 			// Init d'une personne et de ses enfants
 			Personne personne = new Personne();
-			personne.setNom("Maumenée");
-			personne.setPrenom("David");
-			personne.setDateNaissance(sdf.parse("28/03/1978"));
+			personne.setNom("Skywalker");
+			personne.setPrenom("Anakin");
+			personne.setDateNaissance(sdf.parse("25/05/1977"));
 
 			Personne enfant1 = new Personne();
-			enfant1.setNom("Maumenée");
-			enfant1.setPrenom("Nathan");
-			enfant1.setDateNaissance(sdf.parse("19/08/2003"));
+			enfant1.setNom("Skywalker");
+			enfant1.setPrenom("Luke");
+			enfant1.setDateNaissance(sdf.parse("19/08/1997"));
 
 			Personne enfant2 = new Personne();
-			enfant2.setNom("Maumenée");
-			enfant2.setPrenom("Loïs");
-			enfant2.setDateNaissance(sdf.parse("22/04/2006"));
+			enfant2.setNom("Skywalker");
+			enfant2.setPrenom("Leia");
+			enfant2.setDateNaissance(sdf.parse("19/08/1997"));
 			
 			personne.setEnfants(new ArrayList<Personne>());
 			personne.getEnfants().add(enfant1);
