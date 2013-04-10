@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+
+
+	<mapping>
+		<class-a>com.gop.expertec.entite.Client</class-a>
+		<class-b>com.gop.expertec.entity.Customer</class-b>
+		<field>
+			<a>numeroClient</a>
+			<b>customerNumber</b>
+		</field>
+	</mapping>
+	<mapping>
+		<class-a>com.gop.expertec.entite.Personne</class-a>
+		<class-b>com.gop.expertec.entity.Person</class-b>
+		<field>
+			<a>nom</a>
+			<b>lastName</b>
+		</field>
+		<field>
+			<a>prenom</a>
+			<b>firstName</b>
+		</field>
+		<field>
+			<a>enfants</a>
+			<b>children</b>
+		</field>
+		<field>
+			<a>dateNaissance</a>
+			<b>birthDate</b>
+		</field>
+
+	</mapping>
+
+
+	<!-- exemple de mapping de date String -->
+	<mapping>
+		<class-a>com.gop.expertec.entite.Personne</class-a>
+		<class-b>com.gop.expertec.dto.string.PersonneDtoString</class-b>
+
+		<field>
+			<a>dateNaissance</a>
+			<b  date-format="dd/MM/yyyy">dateNaissanceString</b>
+		</field>
+	</mapping>
+
+
+</mappings> 
