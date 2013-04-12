@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+
+	<mapping>
+		<class-a>com.gop.expertec.inheritance.fr.Groupe</class-a>
+		<class-b>com.gop.expertec.inheritance.uk.Group</class-b>
+		<field>
+			<a>personnes</a>
+			<b>persons</b>
+			<!-- TODO: comment/uncomment hints -->
+			<a-hint>com.gop.expertec.inheritance.fr.PersonneMorale,com.gop.expertec.inheritance.fr.PersonnePhysique</a-hint>
+			<b-hint>com.gop.expertec.inheritance.uk.MoralPerson,com.gop.expertec.inheritance.uk.PhysicalPerson</b-hint>
+		</field>
+	</mapping>
+	<mapping>
+		<class-a>com.gop.expertec.inheritance.fr.PersonneAbstract</class-a>
+		<class-b>com.gop.expertec.inheritance.uk.PersonAbstract</class-b>
+		<field>
+			<a>adresse</a>
+			<b>adress</b>
+		</field>
+		<field>
+			<a>nom</a>
+			<b>name</b>
+		</field>
+	</mapping>
+
+
+	<mapping>
+		<class-a>com.gop.expertec.inheritance.fr.PersonneMorale</class-a>
+		<class-b>com.gop.expertec.inheritance.uk.MoralPerson</class-b>
+
+		<field>
+			<a>dateCreation</a>
+			<b>creationDate</b>
+		</field>
+		<!-- TODO: comment/uncomment hints -->
+		<field custom-converter="com.gop.expertec.dozer.StringToEnumConverter">
+			<!-- <field> -->
+			<a>formeLegale</a>
+			<b>legalForm</b>
+		</field>
+	</mapping>
+	<mapping>
+		<class-a>com.gop.expertec.inheritance.fr.PersonnePhysique</class-a>
+		<class-b>com.gop.expertec.inheritance.uk.PhysicalPerson</class-b>
+		<field>
+			<a>dateNaiss</a>
+			<b>birthDate</b>
+		</field>
+		<field>
+			<a>prenom</a>
+			<b>firstName</b>
+		</field>
+	</mapping>
+
+	<mapping>
+		<class-a>com.gop.expertec.inheritance.fr.Adresse</class-a>
+		<class-b>com.gop.expertec.inheritance.uk.Adress</class-b>
+		<field>
+			<a>numVoie</a>
+			<b>streetAndNumber</b>
+		</field>
+		<field>
+			<a>codePostal</a>
+			<b>zipCode</b>
+		</field>
+		<field>
+			<a>ville</a>
+			<b>city</b>
+		</field>
+	</mapping>
+	
+
+</mappings> 

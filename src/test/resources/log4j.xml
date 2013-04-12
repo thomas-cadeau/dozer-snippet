@@ -11,22 +11,22 @@
 	</appender>
 
 	<appender name="FILE_DEBUG" class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="Threshold" value="DEBUG"/>
-        <param name="file" value="target/log-debug.txt" />
-        <param name="DatePattern" value="'.'yyyy-MM-dd" />
-        <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="[%t] %d{HH:mm:ss,SSS} %-5p %l - %m%n" />
-        </layout>
-    </appender>
-    
-    <appender name="FILE_INFO" class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="Threshold" value="INFO"/>
-        <param name="file" value="target/log-info.txt" />
-        <param name="DatePattern" value="'.'yyyy-MM-dd" />
-        <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="[%t] %d{HH:mm:ss,SSS} %-5p %l - %m%n" />
-        </layout>
-    </appender>
+		<param name="Threshold" value="DEBUG" />
+		<param name="file" value="target/log-debug.txt" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%t] %d{HH:mm:ss,SSS} %-5p %l - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="FILE_INFO" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Threshold" value="INFO" />
+		<param name="file" value="target/log-info.txt" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%t] %d{HH:mm:ss,SSS} %-5p %l - %m%n" />
+		</layout>
+	</appender>
 
 	<root>
 		<priority value="DEBUG" />
@@ -35,8 +35,17 @@
 		<appender-ref ref="FILE_DEBUG" />
 	</root>
 
-<!-- 	<logger name="org.dozer" additivity="false"> -->
-<!-- 		<level value="DEBUG" /> -->
-<!-- 		<appender-ref ref="console" /> -->
-<!-- 	</logger> -->
+	<logger name="org.dozer" additivity="false">
+		<level value="ERROR" />
+		<!-- <appender-ref ref="console" /> -->
+	</logger>
+
+	<logger name="org.apache" additivity="false">
+		<level value="ERROR" />
+		<!-- <appender-ref ref="console" /> -->
+	</logger>
+	<logger name="org.springframework" additivity="false">
+		<level value="ERROR" />
+		<!-- <appender-ref ref="console" /> -->
+	</logger>
 </log4j:configuration>

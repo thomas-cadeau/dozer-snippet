@@ -125,7 +125,8 @@ public class TestDozer {
 
 	@Test
 	public void testPersonneAndPersonneDTO() {
-
+		logger.info("===============================================");
+		logger.info("TEST PERSONNE <=> PERSONNEDTO");
 		Personne personne = new Personne();
 		initPersonne(personne);
 
@@ -143,7 +144,8 @@ public class TestDozer {
 
 	@Test
 	public void testPersonneAndPerson() {
-
+		logger.info("===============================================");
+		logger.info("TEST PERSONNE <=> PERSON");
 		Personne personne = new Personne();
 		initPersonne(personne);
 
@@ -159,6 +161,8 @@ public class TestDozer {
 
 	@Test
 	public void testClientAndClientDTO() {
+		logger.info("===============================================");
+		logger.info("TEST CLIENT <=> CLIENTDTO");
 		Client client = new Client();
 		initPersonne(client);
 		client.setNumeroClient(1L);
@@ -180,6 +184,8 @@ public class TestDozer {
 
 	@Test
 	public void testClientAndCustomer() {
+		logger.info("===============================================");
+		logger.info("TEST CLIENT <=> CUSTOMER");
 		Client client = new Client();
 		initPersonne(client);
 		client.setNumeroClient(1L);
@@ -193,6 +199,8 @@ public class TestDozer {
 
 	@Test
 	public void testPersonneAndPersonneDtoString() {
+		logger.info("===============================================");
+		logger.info("TEST PERSONNE <=> PERSONNEDTO");
 
 		Personne personne = new Personne();
 		initPersonne(personne);
